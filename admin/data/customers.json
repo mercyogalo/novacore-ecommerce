@@ -1,0 +1,6 @@
+[
+  { "id": "cust-1", "name": "Amara Johnson", "email": "amara@example.com", "orders": 6, "spent": 412, "status": "Active", "avatar": "/avatars/avatar-1.svg" },
+  { "id": "cust-2", "name": "Elena Ruiz", "email": "elena@example.com", "orders": 4, "spent": 286, "status": "Active", "avatar": "/avatars/avatar-2.svg" },
+  { "id": "cust-3", "name": "Maya Chen", "email": "maya@example.com", "orders": 3, "spent": 198, "status": "Active", "avatar": "/avatars/avatar-3.svg" },
+  { "id": "cust-4", "name": "Jordan Lee", "email": "jordan@example.com", "orders": 2, "spent": 154, "status": "New", "avatar": "/avatars/avatar-4.svg" }
+]

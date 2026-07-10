@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#ffffff"/>
+  <rect x="90" y="120" width="420" height="330" rx="28" fill="#9c6b4b" opacity="0.12"/>
+  <circle cx="300" cy="228" r="72" fill="#9c6b4b" opacity="0.18"/>
+  <text x="300" y="432" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#9c6b4b">Team 3</text>
+</svg>

@@ -1,0 +1,6 @@
+[
+  { "id": "ord-1001", "customer": "Amara Johnson", "email": "amara@example.com", "total": 84, "status": "Delivered", "date": "2026-06-20", "items": 2 },
+  { "id": "ord-1002", "customer": "Elena Ruiz", "email": "elena@example.com", "total": 68, "status": "Shipped", "date": "2026-07-02", "items": 1 },
+  { "id": "ord-1003", "customer": "Maya Chen", "email": "maya@example.com", "total": 54, "status": "Processing", "date": "2026-07-08", "items": 3 },
+  { "id": "ord-1004", "customer": "Jordan Lee", "email": "jordan@example.com", "total": 112, "status": "Pending", "date": "2026-07-09", "items": 4 }
+]

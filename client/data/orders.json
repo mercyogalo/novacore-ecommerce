@@ -1,0 +1,21 @@
+[
+  {
+    "id": "ord-1001",
+    "number": "AURA-1001",
+    "date": "2026-06-20",
+    "status": "Delivered",
+    "total": 84.0,
+    "items": [
+      { "productId": "prod-001", "name": "Shea Glow Body Lotion", "quantity": 2, "price": 28 },
+      { "productId": "prod-007", "name": "Honey Kiss Lip Balm", "quantity": 2, "price": 12 }
+    ]
+  },
+  {
+    "id": "ord-1002",
+    "number": "AURA-1002",
+    "date": "2026-07-02",
+    "status": "Shipped",
+    "total": 68.0,
+    "items": [{ "productId": "prod-010", "name": "Glow Ritual Gift Set", "quantity": 1, "price": 68 }]
+  }
+]

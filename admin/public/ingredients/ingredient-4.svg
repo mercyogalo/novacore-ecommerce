@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <rect width="500" height="500" fill="#f7f2ec"/>
+  <rect x="75" y="100" width="350" height="275" rx="28" fill="#9c6b4b" opacity="0.12"/>
+  <circle cx="250" cy="190" r="60" fill="#9c6b4b" opacity="0.18"/>
+  <text x="250" y="360" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#9c6b4b">Ingredient 4</text>
+</svg>

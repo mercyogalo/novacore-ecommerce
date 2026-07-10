@@ -1,0 +1,35 @@
+[
+  {
+    "id": "blog-1",
+    "title": "How to Build a Simple Night Routine",
+    "slug": "simple-night-routine",
+    "excerpt": "Three calming steps for healthier skin before bed.",
+    "image": "/blog/blog-1.svg",
+    "category": "Routine",
+    "author": "AURA Editorial",
+    "date": "2026-06-12",
+    "readTime": "4 min"
+  },
+  {
+    "id": "blog-2",
+    "title": "Why Shea Butter Belongs in Every Cabinet",
+    "slug": "why-shea-butter",
+    "excerpt": "From hydration to hair care, shea is a true multitasker.",
+    "image": "/blog/blog-2.svg",
+    "category": "Ingredients",
+    "author": "AURA Editorial",
+    "date": "2026-05-28",
+    "readTime": "5 min"
+  },
+  {
+    "id": "blog-3",
+    "title": "Gift Sets That Feel Personal",
+    "slug": "gift-sets-guide",
+    "excerpt": "Curated bundles designed for effortless gifting.",
+    "image": "/blog/blog-3.svg",
+    "category": "Gifting",
+    "author": "AURA Editorial",
+    "date": "2026-05-10",
+    "readTime": "3 min"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  { "id": "cat-1", "name": "Body Lotions", "slug": "body-lotions", "products": 18 },
+  { "id": "cat-2", "name": "Shea Butter", "slug": "shea-butter", "products": 12 },
+  { "id": "cat-3", "name": "Body Creams", "slug": "body-creams", "products": 15 },
+  { "id": "cat-4", "name": "Face Creams", "slug": "face-creams", "products": 21 },
+  { "id": "cat-5", "name": "Gift Sets", "slug": "gift-sets", "products": 9 }
+]

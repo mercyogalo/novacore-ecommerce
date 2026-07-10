@@ -1,0 +1,10 @@
+{
+  "name": "skincare-ecommerce-workspace",
+  "private": true,
+  "scripts": {
+    "client:dev": "npm --prefix client run dev",
+    "client:build": "npm --prefix client run build",
+    "admin:dev": "npm --prefix admin run dev",
+    "admin:build": "npm --prefix admin run build"
+  }
+}

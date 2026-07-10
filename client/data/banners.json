@@ -1,0 +1,18 @@
+[
+  {
+    "id": "banner-1",
+    "title": "Summer Glow Event",
+    "subtitle": "Save up to 20% on best sellers",
+    "image": "/banners/banner-1.jpg",
+    "cta": "Shop now",
+    "href": "/shop"
+  },
+  {
+    "id": "banner-2",
+    "title": "New Arrivals",
+    "subtitle": "Fresh face creams and body oils",
+    "image": "/banners/banner-2.jpg",
+    "cta": "Explore",
+    "href": "/shop"
+  }
+]

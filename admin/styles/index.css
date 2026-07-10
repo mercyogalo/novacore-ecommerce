@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #2b1a14;
+  --card: #ffffff;
+  --card-foreground: #2b1a14;
+  --muted: #f7f2ec;
+  --muted-foreground: #6f5b50;
+  --primary: #9c6b4b;
+  --primary-foreground: #ffffff;
+  --secondary: #ffffff;
+  --secondary-foreground: #2b1a14;
+  --accent: #f1e6d9;
+  --accent-foreground: #2b1a14;
+  --border: #e7ddd3;
+  --input: #e7ddd3;
+  --ring: #9c6b4b;
+  --radius: 18px;
+  --shadow-sm: 0 4px 16px rgba(43, 26, 20, 0.06);
+  --shadow-md: 0 14px 36px rgba(43, 26, 20, 0.1);
+  --shadow-lg: 0 28px 64px rgba(43, 26, 20, 0.14);
+  --transition-fast: 160ms ease;
+  --transition-base: 240ms ease;
+  --transition-slow: 360ms ease;
+  --font-heading: "Georgia", serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --container-width: 1280px;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.75rem;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--foreground);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+
+.container {
+  width: min(100% - 2rem, var(--container-width));
+  margin-inline: auto;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading);
+    color: var(--foreground);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-[var(--primary)] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-[var(--border)] bg-white px-6 py-3 text-sm font-medium text-[var(--foreground)] transition hover:bg-[var(--accent)];
+  }
+
+  .card {
+    @apply rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] shadow-[var(--shadow-sm)];
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-[var(--input)] bg-white px-4 py-3 text-sm outline-none transition focus:border-[var(--primary)] focus:ring-2;
+    --tw-ring-color: color-mix(in srgb, var(--ring) 20%, transparent);
+  }
+
+  .badge {
+    @apply inline-flex rounded-full bg-[var(--accent)] px-3 py-1 text-xs font-medium text-[var(--foreground)];
+  }
+
+  .page-section {
+    @apply py-16;
+  }
+}

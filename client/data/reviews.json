@@ -1,0 +1,24 @@
+[
+  {
+    "id": "rev-1",
+    "productId": "prod-001",
+    "user": "Amara Johnson",
+    "avatar": "/avatars/avatar-1.svg",
+    "rating": 5,
+    "title": "My daily favorite",
+    "comment": "Soft scent, rich texture, and no greasy finish.",
+    "date": "2026-06-01",
+    "images": ["/reviews/review-1.svg"]
+  },
+  {
+    "id": "rev-2",
+    "productId": "prod-004",
+    "user": "Maya Chen",
+    "avatar": "/avatars/avatar-3.svg",
+    "rating": 4,
+    "title": "Light and effective",
+    "comment": "Works beautifully under makeup and keeps my skin calm.",
+    "date": "2026-05-18",
+    "images": []
+  }
+]

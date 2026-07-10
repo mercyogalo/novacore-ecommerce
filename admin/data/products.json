@@ -1,0 +1,8 @@
+[
+  { "id": "prod-001", "name": "Shea Glow Body Lotion", "category": "Body Lotions", "price": 28, "stock": 42, "status": "Published", "image": "/products/product-1.svg" },
+  { "id": "prod-002", "name": "Velvet Shea Butter", "category": "Shea Butter", "price": 24, "stock": 58, "status": "Published", "image": "/products/product-2.svg" },
+  { "id": "prod-003", "name": "Cocoa Silk Body Cream", "category": "Body Creams", "price": 32, "stock": 21, "status": "Published", "image": "/products/product-3.svg" },
+  { "id": "prod-004", "name": "Radiance Face Cream", "category": "Face Creams", "price": 36, "stock": 35, "status": "Published", "image": "/products/product-4.svg" },
+  { "id": "prod-005", "name": "Golden Body Oil", "category": "Body Oils", "price": 30, "stock": 8, "status": "Low stock", "image": "/products/product-5.svg" },
+  { "id": "prod-006", "name": "Curl Nourish Hair Butter", "category": "Hair Butter", "price": 26, "stock": 44, "status": "Published", "image": "/products/product-6.svg" }
+]

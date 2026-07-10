@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+  <rect width="1200" height="400" fill="#f7f2ec"/>
+  <rect x="180" y="80" width="840" height="220.00000000000003" rx="28" fill="#9c6b4b" opacity="0.12"/>
+  <circle cx="600" cy="152" r="144" fill="#9c6b4b" opacity="0.18"/>
+  <text x="600" y="288" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#9c6b4b">Banner 4</text>
+</svg>

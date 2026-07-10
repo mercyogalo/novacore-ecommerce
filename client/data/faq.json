@@ -1,0 +1,22 @@
+[
+  {
+    "id": "faq-1",
+    "question": "Are the products suitable for sensitive skin?",
+    "answer": "Many formulas are designed with gentle, plant-based ingredients. Always patch test new products before full use."
+  },
+  {
+    "id": "faq-2",
+    "question": "Can I checkout without an account?",
+    "answer": "An account is required to checkout so you can track orders, save addresses, and manage reviews."
+  },
+  {
+    "id": "faq-3",
+    "question": "How do I choose the right routine?",
+    "answer": "Start with cleanse, moisturize, and protect. Add targeted treatments based on your skin type and goals."
+  },
+  {
+    "id": "faq-4",
+    "question": "Do you offer international shipping?",
+    "answer": "Yes. Shipping rates and delivery windows are shown during checkout based on your location."
+  }
+]
