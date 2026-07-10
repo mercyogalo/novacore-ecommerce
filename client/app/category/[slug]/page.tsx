@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
-import { ProductCard } from "../../../components/product-card";
 import { SectionHeading } from "../../../components/section-heading";
+import { CategoryProductsCarousel } from "../../../components/category-loop-carousel";
 import { getCategoryBySlug, getProductsByCategory } from "../../../lib/data";
 
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -20,11 +20,13 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         title={category.name}
         description={`Browse ${products.length} products in ${category.name}.`}
       />
-      <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-10">
         {products.length > 0 ? (
-          products.map((product) => <ProductCard key={product.id} product={product} />)
+          <CategoryProductsCarousel products={products} />
         ) : (
-          <div className="card col-span-full p-8 text-sm text-[var(--muted-foreground)]">No products found in this category yet.</div>
+          <div className="card p-8 text-center text-sm text-[var(--muted-foreground)]">
+            No products found in this category yet.
+          </div>
         )}
       </div>
     </main>

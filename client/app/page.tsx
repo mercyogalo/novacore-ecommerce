@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, BadgeCheck, Leaf, ShieldCheck, Sparkles } from "lucide-react";
-import { CategoryCard } from "../components/content-page";
+import { CategoryLoopCarousel } from "../components/category-loop-carousel";
 import { ProductCard } from "../components/product-card";
 import { SectionHeading } from "../components/section-heading";
 import { getBanners, getCategories, getFaq, getProducts, getTestimonials } from "../lib/data";
@@ -18,7 +18,6 @@ export default function HomePage() {
   const testimonials = getTestimonials();
   const faq = getFaq();
   const banners = getBanners();
-
 
   return (
     <main>
@@ -78,10 +77,8 @@ export default function HomePage() {
           title="Everything your customers expect in one clean system."
           description="Featured collections, ingredient-led browsing, and category-first merchandising are all wired into the same reusable structure."
         />
-        <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {categories.map((category) => (
-            <CategoryCard key={category.id} category={category} />
-          ))}
+        <div className="mt-10">
+          <CategoryLoopCarousel categories={categories} />
         </div>
       </section>
 
@@ -134,8 +131,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      
     </main>
   );
 }
