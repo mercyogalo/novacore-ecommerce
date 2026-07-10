@@ -9,9 +9,7 @@ export function SiteHeader() {
   return (
     <header className="border-b border-[var(--border)] bg-[var(--background)]/95 backdrop-blur">
       <div className="container flex items-center justify-between gap-6 py-5">
-        <Link href="/" className="text-lg font-semibold tracking-[0.2em] text-[var(--foreground)] uppercase">
-          BARE BLISS
-        </Link>
+        <img src="/logos/logo.png" alt="Bare Bliss Logo" className="h-20 w-auto" />        
         <nav className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
             <Link key={item.label} href={item.href} className="text-sm text-[var(--muted-foreground)] transition hover:text-[var(--foreground)]">

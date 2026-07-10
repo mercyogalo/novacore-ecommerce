@@ -1,13 +1,13 @@
 [
-  { "id": "cat-1", "name": "Body Lotions", "slug": "body-lotions", "image": "/categories/category-1.jpg", "productCount": 1 },
-  { "id": "cat-2", "name": "Shea Butter", "slug": "shea-butter", "image": "/categories/category-1.jpg", "productCount": 1 },
-  { "id": "cat-3", "name": "Body Creams", "slug": "body-creams", "image": "/categories/category-1.jpg", "productCount": 1 },
-  { "id": "cat-4", "name": "Face Creams", "slug": "face-creams", "image": "/categories/category-1.jpg", "productCount": 2 },
-  { "id": "cat-5", "name": "Body Oils", "slug": "body-oils", "image": "/categories/category-1.jpg", "productCount": 1 },
-  { "id": "cat-6", "name": "Hair Butter", "slug": "hair-butter", "image": "/categories/category-1.jpg", "productCount": 1 },
-  { "id": "cat-7", "name": "Lip Balms", "slug": "lip-balms", "image": "/categories/category-1.jpg", "productCount": 1 },
-  { "id": "cat-8", "name": "Black Soap", "slug": "black-soap", "image": "/categories/category-1.jpg", "productCount": 1 },
-  { "id": "cat-9", "name": "Scrubs", "slug": "scrubs", "image": "/categories/category-1.jpg", "productCount": 1 },
-  { "id": "cat-10", "name": "Gift Sets", "slug": "gift-sets", "image": "/categories/category-1.jpg", "productCount": 1 },
-  { "id": "cat-11", "name": "Beauty Accessories", "slug": "beauty-accessories", "image": "/categories/category-1.jpg", "productCount": 1 }
+  { "id": "cat-1", "name": "Body Lotions", "slug": "body-lotions", "image": "/categories/category-1.png", "productCount": 1 },
+  { "id": "cat-2", "name": "Shea Butter", "slug": "shea-butter", "image": "/categories/category-2.png", "productCount": 1 },
+  { "id": "cat-3", "name": "Body Creams", "slug": "body-creams", "image": "/categories/category-3.png", "productCount": 1 },
+  { "id": "cat-4", "name": "Face Creams", "slug": "face-creams", "image": "/categories/category-4.png", "productCount": 2 },
+  { "id": "cat-5", "name": "Body Oils", "slug": "body-oils", "image": "/categories/category-5.png", "productCount": 1 },
+  { "id": "cat-6", "name": "Hair Butter", "slug": "hair-butter", "image": "/categories/category-6.png", "productCount": 1 },
+  { "id": "cat-7", "name": "Lip Balms", "slug": "lip-balms", "image": "/categories/category-7.png", "productCount": 1 },
+  { "id": "cat-8", "name": "Black Soap", "slug": "black-soap", "image": "/categories/category-8.png", "productCount": 1 },
+  { "id": "cat-9", "name": "Scrubs", "slug": "scrubs", "image": "/categories/category-8.png", "productCount": 1 },
+  { "id": "cat-10", "name": "Gift Sets", "slug": "gift-sets", "image": "/categories/category-8.png", "productCount": 1 },
+  { "id": "cat-11", "name": "Beauty Accessories", "slug": "beauty-accessories", "image": "/categories/category-8.png", "productCount": 1 }
 ]

@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
-  <rect width="900" height="600" fill="#f7f2ec"/>
-  <rect x="135" y="120" width="630" height="330" rx="28" fill="#9c6b4b" opacity="0.12"/>
-  <circle cx="450" cy="228" r="108" fill="#9c6b4b" opacity="0.18"/>
-  <text x="450" y="432" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#9c6b4b">Scrubs</text>
-</svg>

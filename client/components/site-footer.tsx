@@ -12,7 +12,7 @@ export function SiteFooter() {
     <footer className="border-t border-[var(--border)] bg-[var(--muted)]/60">
       <div className="container grid gap-8 py-12 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
-          <p className="text-lg font-semibold tracking-[0.2em] uppercase">AURA</p>
+          <img src="/logos/logo.png" alt="Bare Bliss Logo" className="h-24 w-auto" /> 
           <p className="mt-4 max-w-md text-sm leading-7 text-[var(--muted-foreground)]">
             Premium organic skincare template built for modern ecommerce, with reusable sections, static data, and a luxury editorial feel.
           </p>

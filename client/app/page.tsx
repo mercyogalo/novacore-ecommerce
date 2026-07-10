@@ -22,27 +22,35 @@ export default function HomePage() {
 
   return (
     <main>
-      <section className="border-b border-[var(--border)] bg-[var(--muted)]/40">
-        <div className="container grid gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-[var(--muted-foreground)]">Organic Skincare</p>
-            <h1 className="mt-5 max-w-2xl text-5xl font-semibold leading-tight md:text-6xl">
-              Luxury skincare crafted for calm, glow, and conversion.
+      <section className="relative border-b border-[var(--border)] overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/hero/hero-1.png"
+            alt="Premium skincare hero"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+        </div>
+
+        <div className="container relative py-24 lg:py-24">
+          <div className="max-w-xl">
+            <p className="text-sm uppercase tracking-[0.35em] text-white/80">Organic Skincare</p>
+            <h1 className="mt-5 text-5xl font-semibold leading-tight text-white md:text-6xl">
+              Luxury skincare crafted for calm, glow and conversion.
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted-foreground)]">
+            <p className="mt-6 text-lg leading-8 text-white/85">
               A premium storefront template with reusable ecommerce sections, graceful motion-ready structure, and editable global design tokens.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/shop" className="btn-primary">
                 Shop collection <ArrowRight size={16} />
               </Link>
-              <Link href="/about" className="btn-secondary">
+              <Link href="/about" className="btn-secondary bg-white/10 text-white border-white/30 hover:bg-white/20">
                 Our story
               </Link>
             </div>
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius)] border border-[var(--border)] shadow-[var(--shadow-md)]">
-            <Image src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/758/original/This_is_a_sign_to_invest_in_your_glow_%E2%9C%A8%F0%9F%A4%8D_From_brightening_body_wash_to_nourishing_oils_and_hydrating_serums__every_Beccssbotanicals_product_is_made_to_leave_your_skin_feeling_soft__radiant__and_confident_every_sin.jpg?1783603173" alt="Premium skincare hero" fill className="object-cover" priority />
           </div>
         </div>
       </section>
