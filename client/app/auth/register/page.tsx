@@ -1,26 +1,50 @@
 import Link from "next/link";
-import { SectionHeading } from "../../../components/section-heading";
+import { AuthDivider, AuthSplitLayout, GoogleAuthButton } from "../../../components/auth-split-layout";
 
 export default function RegisterPage() {
   return (
-    <main className="container py-16">
-      <div className="mx-auto max-w-md">
-        <SectionHeading title="Create account" description="Register to save addresses, track orders, and leave product reviews." />
-        <form className="card mt-8 space-y-4 p-6">
-          <input className="input-field" placeholder="Full name" />
-          <input className="input-field" placeholder="Email address" type="email" />
-          <input className="input-field" placeholder="Password" type="password" />
-          <label className="flex items-center gap-2 text-sm text-[var(--muted-foreground)]">
-            <input type="checkbox" /> I agree to the terms and privacy policy
-          </label>
-          <button type="button" className="btn-primary w-full">
-            Create account
-          </button>
-          <Link href="/auth/login" className="block text-center text-sm text-[var(--primary)]">
-            Already have an account? Sign in
+    <AuthSplitLayout
+      title="Create your account"
+      subtitle="Join Bare Bliss to save addresses, track orders, and leave product reviews."
+      footer={
+        <span>
+          Already have an account?{" "}
+          <Link href="/auth/login" className="font-medium text-[var(--primary)] hover:underline">
+            Sign in
           </Link>
-        </form>
-      </div>
-    </main>
+        </span>
+      }
+    >
+      <form className="space-y-4">
+        <div>
+          <label className="mb-2 block text-sm font-medium">Name</label>
+          <input className="input-field" placeholder="Full name" />
+        </div>
+        <div>
+          <label className="mb-2 block text-sm font-medium">Email</label>
+          <input className="input-field" placeholder="you@example.com" type="email" />
+        </div>
+        <div>
+          <label className="mb-2 block text-sm font-medium">Phone</label>
+          <input className="input-field" placeholder="Phone number" type="tel" />
+        </div>
+        <div>
+          <label className="mb-2 block text-sm font-medium">Password</label>
+          <input className="input-field" placeholder="Create a password" type="password" />
+        </div>
+        <div>
+          <label className="mb-2 block text-sm font-medium">Confirm password</label>
+          <input className="input-field" placeholder="Confirm your password" type="password" />
+        </div>
+        <label className="flex items-start gap-2 text-sm text-[var(--muted-foreground)]">
+          <input type="checkbox" className="mt-1 accent-[var(--primary)]" /> I agree to the terms and privacy policy
+        </label>
+        <button type="button" className="btn-primary w-full">
+          Register
+        </button>
+        <AuthDivider />
+        <GoogleAuthButton />
+      </form>
+    </AuthSplitLayout>
   );
 }

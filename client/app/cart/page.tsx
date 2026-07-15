@@ -18,8 +18,8 @@ export default function CartPage() {
         <div className="space-y-4">
           {cartItems.map((item) => (
             <article key={item.id} className="card flex gap-4 p-4">
-              <div className="relative h-24 w-24 overflow-hidden rounded-xl bg-[var(--muted)]">
-                <Image src={item.image} alt={item.name} fill className="object-cover" />
+              <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-transparent p-2">
+                <Image src={item.image} alt={item.name} fill className="object-contain" />
               </div>
               <div className="flex-1">
                 <h3 className="font-medium">{item.name}</h3>

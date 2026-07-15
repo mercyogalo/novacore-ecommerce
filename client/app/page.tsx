@@ -1,27 +1,26 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, BadgeCheck, Leaf, ShieldCheck, Sparkles } from "lucide-react";
-import { CategoryLoopCarousel } from "../components/category-loop-carousel";
+import { ArrowRight } from "lucide-react";
+import { CategoryGrid } from "../components/category-grid";
+import { FeaturesRow } from "../components/features-row";
+import { MotionSection } from "../components/motion-section";
+import { NewsletterSection } from "../components/newsletter-section";
 import { ProductCard } from "../components/product-card";
+import { PromoCta } from "../components/promo-cta";
 import { SectionHeading } from "../components/section-heading";
-import { getBanners, getCategories, getFaq, getProducts, getTestimonials } from "../lib/data";
-
-const benefits = [
-  { icon: Leaf, title: "Clean ingredients", text: "Thoughtfully sourced formulas designed for everyday use." },
-  { icon: ShieldCheck, title: "Sensitive-skin friendly", text: "Calming, skin-first routines with minimal irritation." },
-  { icon: BadgeCheck, title: "Trusted quality", text: "Clear product storytelling and premium packaging cues." }
-];
+import { TestimonialsCarousel } from "../components/testimonials-carousel";
+import { WhyChooseUs } from "../components/why-choose-us";
+import { getBanners, getCategories, getProducts, getTestimonials } from "../lib/data";
 
 export default function HomePage() {
-  const featuredProducts = getProducts().slice(0, 6);
+  const bestSellers = getProducts().slice(0, 4);
   const categories = getCategories();
   const testimonials = getTestimonials();
-  const faq = getFaq();
   const banners = getBanners();
 
   return (
     <main>
-      <section className="relative border-b border-[var(--border)] overflow-hidden">
+      <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/hero/hero-1.png"
@@ -71,66 +70,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container page-section">
+      <FeaturesRow />
+
+      <MotionSection className="container page-section">
         <SectionHeading
           eyebrow="Shop by category"
-          title="Everything your customers expect in one clean system."
-          description="Featured collections, ingredient-led browsing, and category-first merchandising are all wired into the same reusable structure."
+          title="Find your perfect ritual"
+          description="Explore our full range of organic skincare categories."
+          align="center"
         />
-        <div className="mt-10">
-          <CategoryLoopCarousel categories={categories} />
+        <div className="mt-12">
+          <CategoryGrid categories={categories} />
         </div>
-      </section>
+      </MotionSection>
 
-      <section className="bg-[var(--muted)]/40 py-16">
+      <MotionSection className="py-16">
         <div className="container">
           <SectionHeading
-            eyebrow="Featured products"
-            title="Designed for premium product discovery."
-            description="Product cards are built as reusable frontend-only units with image, pricing, badge, rating, and category metadata."
+            eyebrow="Best sellers"
+            title="Customer favorites"
+            description="Our most-loved formulas, chosen for results you can feel."
+            align="center"
           />
-          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+            {bestSellers.map((product) => (
+              <ProductCard key={product.id} product={product} featured />
             ))}
           </div>
         </div>
-      </section>
+      </MotionSection>
 
-      <section className="container page-section">
-        <SectionHeading eyebrow="Why choose us" title="A calm luxury system that stays easy to customize." description="Every visual decision is controlled through global CSS variables so colors, radius, and spacing can be changed in one place." />
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
-          {benefits.map(({ icon: Icon, title, text }) => (
-            <article key={title} className="card p-6">
-              <Icon className="text-[var(--primary)]" />
-              <h3 className="mt-5 text-xl font-semibold">{title}</h3>
-              <p className="mt-3 text-sm leading-7 text-[var(--muted-foreground)]">{text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <PromoCta />
 
-      <section className="border-y border-[var(--border)] bg-[var(--muted)]/35 py-16">
-        <div className="container">
-          <SectionHeading eyebrow="Testimonials" title="Loved by customers who value clean luxury." description="Social proof sections are ready for ratings, quotes, and product attribution." />
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {testimonials.map((item) => (
-              <article key={item.id} className="card p-6">
-                <div className="flex items-center gap-3">
-                  <div className="relative h-12 w-12 overflow-hidden rounded-full">
-                    <Image src={item.avatar} alt={item.name} fill className="object-cover" />
-                  </div>
-                  <div>
-                    <p className="font-medium">{item.name}</p>
-                    <p className="text-xs text-[var(--muted-foreground)]">{item.product}</p>
-                  </div>
-                </div>
-                <p className="mt-5 text-sm leading-7 text-[var(--muted-foreground)]">"{item.text}"</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WhyChooseUs />
+
+      <TestimonialsCarousel testimonials={testimonials} />
+
+      <NewsletterSection />
     </main>
   );
 }

@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 import { notFound } from "next/navigation";
 import { ProductCard } from "../../../components/product-card";
+import { ProductGallery } from "../../../components/product-gallery";
+import { ProductPurchasePanel } from "../../../components/product-purchase-panel";
 import { SectionHeading } from "../../../components/section-heading";
 import { getProductBySlug, getProducts, getReviews } from "../../../lib/data";
 
@@ -14,68 +17,31 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   }
 
   const reviews = getReviews(product.id);
-  const related = getProducts().filter((item) => item.categorySlug === product.categorySlug && item.id !== product.id).slice(0, 3);
+  const related = getProducts().filter((item) => item.categorySlug === product.categorySlug && item.id !== product.id).slice(0, 4);
+  const recentlyViewed = getProducts().filter((item) => item.id !== product.id).slice(0, 3);
 
   return (
-    <main className="container py-16">
-      <div className="grid gap-10 lg:grid-cols-2">
-        <div className="space-y-4">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[var(--radius)] border border-[var(--border)] bg-[var(--muted)]">
-            <Image src={product.image} alt={product.name} fill className="object-cover" priority />
-          </div>
-          <div className="grid grid-cols-3 gap-4">
-            {(product.images ?? [product.image]).map((image) => (
-              <div key={image} className="relative aspect-square overflow-hidden rounded-xl border border-[var(--border)]">
-                <Image src={image} alt={product.name} fill className="object-cover" />
-              </div>
-            ))}
-          </div>
-        </div>
+    <main className="container py-8 md:py-12">
+      <nav className="mb-8 flex flex-wrap items-center gap-2 text-sm text-[var(--muted-foreground)]">
+        <Link href="/" className="hover:text-[var(--foreground)]">
+          Home
+        </Link>
+        <ChevronRight className="h-4 w-4" />
+        <Link href="/shop" className="hover:text-[var(--foreground)]">
+          Shop
+        </Link>
+        <ChevronRight className="h-4 w-4" />
+        <span className="text-[var(--foreground)]">{product.name}</span>
+      </nav>
 
-        <div>
-          <p className="text-sm uppercase tracking-[0.25em] text-[var(--muted-foreground)]">{product.category}</p>
-          <h1 className="mt-4 text-4xl font-semibold">{product.name}</h1>
-          <p className="mt-4 text-sm leading-7 text-[var(--muted-foreground)]">{product.description}</p>
-          <div className="mt-6 flex items-center gap-4">
-            <span className="text-3xl font-semibold">${product.price.toFixed(2)}</span>
-            {product.compareAtPrice ? <span className="text-lg text-[var(--muted-foreground)] line-through">${product.compareAtPrice.toFixed(2)}</span> : null}
-          </div>
-          <p className="mt-3 text-sm text-[var(--muted-foreground)]">
-            {product.rating.toFixed(1)} / 5 ({product.reviewsCount} reviews) · {product.stock} in stock
-          </p>
-
-          <div className="mt-8 space-y-4">
-            <div>
-              <p className="text-sm font-medium">Ingredients</p>
-              <p className="mt-2 text-sm text-[var(--muted-foreground)]">{product.ingredients.join(", ")}</p>
-            </div>
-            <div>
-              <p className="text-sm font-medium">Benefits</p>
-              <p className="mt-2 text-sm text-[var(--muted-foreground)]">{(product.benefits ?? []).join(" · ")}</p>
-            </div>
-            <div>
-              <p className="text-sm font-medium">How to use</p>
-              <p className="mt-2 text-sm text-[var(--muted-foreground)]">{product.howToUse}</p>
-            </div>
-          </div>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/cart" className="btn-primary">
-              Add to cart
-            </Link>
-            <Link href="/checkout" className="btn-secondary">
-              Buy now
-            </Link>
-            <Link href="/wishlist" className="btn-secondary">
-              Wishlist
-            </Link>
-          </div>
-        </div>
+      <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
+        <ProductGallery product={product} />
+        <ProductPurchasePanel product={product} />
       </div>
 
-      <section className="mt-16">
-        <SectionHeading eyebrow="Reviews" title="Customer feedback" description="Ratings, comments, and customer photos." />
-        <div className="mt-8 grid gap-4">
+      <section className="mt-16 border-t border-[var(--border)] pt-16">
+        <SectionHeading eyebrow="Reviews" title="Customer reviews" description="Real feedback from the Bare Bliss community." />
+        <div className="mt-8 grid gap-4 lg:grid-cols-2">
           {reviews.map((review) => (
             <article key={review.id} className="card p-6">
               <div className="flex items-center gap-3">
@@ -92,18 +58,38 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             </article>
           ))}
         </div>
+
+        <div className="card mt-8 p-6">
+          <h3 className="text-lg font-semibold">Write a review</h3>
+          <form className="mt-4 space-y-4">
+            <input className="input-field" placeholder="Review title" />
+            <textarea className="input-field min-h-28" placeholder="Share your experience" />
+            <button type="button" className="btn-primary">
+              Submit review
+            </button>
+          </form>
+        </div>
       </section>
 
       {related.length > 0 ? (
         <section className="mt-16">
           <SectionHeading eyebrow="Related" title="You may also like" description="Products from the same category." />
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
             {related.map((item) => (
-              <ProductCard key={item.id} product={item} />
+              <ProductCard key={item.id} product={item} featured />
             ))}
           </div>
         </section>
       ) : null}
+
+      <section className="mt-16">
+        <SectionHeading eyebrow="Recently viewed" title="Continue browsing" description="Products you may want to revisit." />
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          {recentlyViewed.map((item) => (
+            <ProductCard key={item.id} product={item} />
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

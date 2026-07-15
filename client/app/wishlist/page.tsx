@@ -8,9 +8,9 @@ export default function WishlistPage() {
   return (
     <main className="container py-16">
       <SectionHeading title="Wishlist" description="Save products, move to cart, remove, or share your curated list." />
-      <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {items.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} featured />
         ))}
       </div>
     </main>
