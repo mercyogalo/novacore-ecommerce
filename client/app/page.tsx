@@ -36,10 +36,10 @@ export default function HomePage() {
           <div className="max-w-xl">
             <p className="text-sm uppercase tracking-[0.35em] text-white/80">Organic Skincare</p>
             <h1 className="mt-5 text-5xl font-semibold leading-tight text-white md:text-6xl">
-              Luxury skincare crafted for calm, glow and conversion.
+            Natural Skincare. Pure Confidence.
             </h1>
             <p className="mt-6 text-lg leading-8 text-white/85">
-              A premium storefront template with reusable ecommerce sections, graceful motion-ready structure, and editable global design tokens.
+            Nourish your skin with handcrafted products made from nature's finest ingredients. From rich body butters to nourishing oils and gentle face care, Bare Bliss helps you achieve healthy, radiant skin naturally.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/shop" className="btn-primary">

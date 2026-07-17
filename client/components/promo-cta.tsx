@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 export function PromoCta() {
   return (
     <section className="relative overflow-hidden py-20 md:py-28">
-      <Image src="/products/product-1.png" alt="Glow Ritual Collection" fill className="object-cover" />
+      <Image src="/logos/cta-img.png" alt="Glow Ritual Collection" fill className="object-cover" />
       <div className="absolute inset-0 bg-[#2b1a14]/55" />
       <div className="container relative">
         <motion.div
@@ -18,7 +18,7 @@ export function PromoCta() {
           className="max-w-xl text-white"
         >
           <p className="text-sm uppercase tracking-[0.3em] text-white/75">Limited offer</p>
-          <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">Glow Ritual Collection</h2>
+          <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl text-white/75">Glow Ritual Collection</h2>
           <p className="mt-5 text-sm leading-7 text-white/85 md:text-base">
             Discover our curated gift sets and body care essentials. Thoughtfully packaged for everyday luxury and special moments.
           </p>

@@ -2,7 +2,7 @@
   {
     "id": "test-1",
     "name": "Amara Johnson",
-    "avatar": "/avatars/avatar-1.svg",
+    "avatar": "/avatars/testimonial-1.png",
     "rating": 5,
     "text": "The body lotion feels luxurious and absorbs quickly. My skin stays soft all day.",
     "product": "Shea Glow Body Lotion"
@@ -10,7 +10,7 @@
   {
     "id": "test-2",
     "name": "Elena Ruiz",
-    "avatar": "/avatars/avatar-2.svg",
+    "avatar": "/avatars/testimonial-2.png",
     "rating": 5,
     "text": "Beautiful packaging, clean ingredients, and the gift set made the perfect present.",
     "product": "Glow Ritual Gift Set"
@@ -18,9 +18,17 @@
   {
     "id": "test-3",
     "name": "Maya Chen",
-    "avatar": "/avatars/avatar-3.svg",
+    "avatar": "/avatars/testimonial-3.png",
     "rating": 4,
     "text": "The face cream is lightweight but deeply hydrating. Exactly what I wanted.",
     "product": "Radiance Face Cream"
+  },
+  {
+    "id": "test-2",
+    "name": "Elena Ruiz",
+    "avatar": "/avatars/testimonial-2.png",
+    "rating": 5,
+    "text": "Beautiful packaging, clean ingredients, and the gift set made the perfect present.",
+    "product": "Glow Ritual Gift Set"
   }
 ]
